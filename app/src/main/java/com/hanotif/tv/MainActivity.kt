@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.commit
 import com.hanotif.tv.databinding.ActivityMainBinding
@@ -25,6 +26,17 @@ class MainActivity : AppCompatActivity() {
                 replace(R.id.fragmentContainer, DashboardFragment(), Constants.TAG_DASHBOARD)
             }
         }
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (supportFragmentManager.backStackEntryCount > 0) {
+                    supportFragmentManager.popBackStack()
+                } else {
+                    isEnabled = false
+                    onBackPressedDispatcher.onBackPressed()
+                }
+            }
+        })
 
         requestOverlayPermissionIfNeeded()
         handleIncomingIntent(intent)
@@ -59,14 +71,6 @@ class MainActivity : AppCompatActivity() {
                 android.net.Uri.parse("package:$packageName")
             )
             startActivity(intent)
-        }
-    }
-
-    override fun onBackPressed() {
-        if (supportFragmentManager.backStackEntryCount > 0) {
-            supportFragmentManager.popBackStack()
-        } else {
-            super.onBackPressed()
         }
     }
 }

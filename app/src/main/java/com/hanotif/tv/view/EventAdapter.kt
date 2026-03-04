@@ -33,7 +33,7 @@ class EventAdapter(
         fun bind(event: FrigateEvent) {
             binding.tvEventLabel.text = event.label.replaceFirstChar { it.uppercase() }
             binding.tvEventCamera.text = event.camera
-            binding.tvEventTime.text = DATE_FORMAT.format(Date((event.startTime * 1000).toLong()))
+            binding.tvEventTime.text = DATE_FORMAT.format(Date(event.startTime.toLong() * 1000))
             binding.tvEventScore.text = "${(event.topScore * 100).toInt()}%"
 
             binding.root.setOnClickListener { onEventClick(event) }

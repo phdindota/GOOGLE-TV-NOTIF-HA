@@ -20,9 +20,8 @@ class FCMService : FirebaseMessagingService() {
 
     override fun onNewToken(token: String) {
         super.onNewToken(token)
-        // Token is managed by HA Companion / automation setup
-        // Store it locally for display in settings if needed
-        prefs.haToken.let { /* token registration handled externally */ }
+        // FCM token is managed by HA Companion or custom automation setup.
+        // Users can retrieve it from Firebase Console to configure HA notifications.
     }
 
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
