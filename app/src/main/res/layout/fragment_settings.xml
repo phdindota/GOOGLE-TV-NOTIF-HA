@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="@dimen/screen_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/section_margin">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/section_margin"
+                android:text="@string/back"
+                android:textColor="@color/text_primary"
+                android:background="@drawable/bg_button_secondary"
+                android:focusable="true"
+                android:padding="@dimen/button_padding" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/settings"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Home Assistant Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/home_assistant"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/subtitle_text_size"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/item_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ha_url_label"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/label_text_size" />
+
+        <EditText
+            android:id="@+id/etHaUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:hint="@string/ha_url_hint"
+            android:inputType="textUri"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:background="@drawable/bg_input"
+            android:padding="@dimen/input_padding"
+            android:focusable="true"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ha_token_label"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/label_text_size" />
+
+        <EditText
+            android:id="@+id/etHaToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/section_margin"
+            android:hint="@string/ha_token_hint"
+            android:inputType="textPassword"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:background="@drawable/bg_input"
+            android:padding="@dimen/input_padding"
+            android:focusable="true"
+            android:singleLine="true" />
+
+        <!-- Frigate Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/frigate_nvr"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/subtitle_text_size"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/item_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/frigate_url_label"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/label_text_size" />
+
+        <EditText
+            android:id="@+id/etFrigateUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/section_margin"
+            android:hint="@string/frigate_url_hint"
+            android:inputType="textUri"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:background="@drawable/bg_input"
+            android:padding="@dimen/input_padding"
+            android:focusable="true"
+            android:singleLine="true" />
+
+        <!-- Camera Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cameras"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/subtitle_text_size"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/item_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_name_label"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/label_text_size" />
+
+        <EditText
+            android:id="@+id/etCameraName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:hint="@string/camera_name_hint"
+            android:inputType="text"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:background="@drawable/bg_input"
+            android:padding="@dimen/input_padding"
+            android:focusable="true"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rtsp_url_label"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/label_text_size" />
+
+        <EditText
+            android:id="@+id/etCameraRtspUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:hint="@string/rtsp_url_hint"
+            android:inputType="textUri"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_hint"
+            android:background="@drawable/bg_input"
+            android:padding="@dimen/input_padding"
+            android:focusable="true"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/btnAddCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/item_margin"
+            android:text="@string/add_camera"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_button_secondary"
+            android:focusable="true"
+            android:padding="@dimen/button_padding" />
+
+        <TextView
+            android:id="@+id/tvCameraList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/section_margin"
+            android:text="@string/no_cameras_added"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/body_text_size"
+            android:padding="@dimen/input_padding"
+            android:background="@drawable/bg_input_readonly" />
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_margin"
+            android:text="@string/save_settings"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_primary"
+            android:focusable="true"
+            android:padding="@dimen/button_padding" />
+
+    </LinearLayout>
+
+</ScrollView>

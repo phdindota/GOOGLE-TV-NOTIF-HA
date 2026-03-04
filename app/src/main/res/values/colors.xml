@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background colors -->
+    <color name="background">#1A1A2E</color>
+    <color name="surface">#16213E</color>
+    <color name="card_background">#0F3460</color>
+    <color name="overlay_background">#E6121212</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_secondary_light">#CCCCCC</color>
+    <color name="text_hint">#666666</color>
+
+    <!-- Accent -->
+    <color name="accent">#03A9F4</color>
+    <color name="accent_dark">#0288D1</color>
+    <color name="accent_pressed">#0277BD</color>
+
+    <!-- Focus highlight -->
+    <color name="focus_border">#03A9F4</color>
+
+    <!-- Utility -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="divider">#2A2A4A</color>
+    <color name="input_background">#0D1B2A</color>
+    <color name="button_secondary_bg">#2A2A4A</color>
+    <color name="event_item_bg">#12203A</color>
+</resources>
