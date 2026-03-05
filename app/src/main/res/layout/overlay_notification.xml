@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/overlay_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_overlay"
+    android:padding="@dimen/overlay_padding"
+    android:elevation="8dp">
+
+    <TextView
+        android:id="@+id/tvOverlayTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/subtitle_text_size"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/item_margin" />
+
+    <TextView
+        android:id="@+id/tvOverlayMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_secondary_light"
+        android:textSize="@dimen/body_text_size"
+        android:layout_marginBottom="@dimen/item_margin" />
+
+    <ImageView
+        android:id="@+id/ivOverlaySnapshot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/overlay_image_height"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        android:contentDescription="@string/camera_snapshot"
+        android:layout_marginBottom="@dimen/item_margin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/btnOverlayDismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:text="@string/dismiss"
+            android:textColor="@color/text_secondary_light"
+            android:textSize="@dimen/body_text_size"
+            android:padding="@dimen/button_padding"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/bg_button_overlay_secondary" />
+
+        <TextView
+            android:id="@+id/btnOverlayOpen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_stream"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/body_text_size"
+            android:textStyle="bold"
+            android:padding="@dimen/button_padding"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="@drawable/bg_button_overlay_primary"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

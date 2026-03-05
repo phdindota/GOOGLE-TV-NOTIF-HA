@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.HANotifTV" parent="Theme.AppCompat.Leanback">
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="colorPrimary">@color/accent</item>
+        <item name="colorPrimaryDark">@color/accent_dark</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:editTextStyle">@style/Widget.HANotifTV.EditText</item>
+        <item name="android:buttonStyle">@style/Widget.HANotifTV.Button</item>
+    </style>
+
+    <style name="Widget.HANotifTV.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:background">@drawable/bg_input</item>
+    </style>
+
+    <style name="Widget.HANotifTV.Button" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:background">@drawable/bg_button_primary</item>
+    </style>
+</resources>

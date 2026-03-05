@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_padding">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/section_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/button_margin"
+            android:text="@string/refresh"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_button_secondary"
+            android:focusable="true"
+            android:padding="@dimen/button_padding" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/settings"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/bg_button_primary"
+            android:focusable="true"
+            android:padding="@dimen/button_padding" />
+
+    </LinearLayout>
+
+    <!-- Empty state -->
+    <TextView
+        android:id="@+id/tvEmptyState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="@string/configure_app_message"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/body_text_size"
+        android:gravity="center"
+        android:padding="@dimen/section_margin" />
+
+    <!-- Main content: cameras + events side by side -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <!-- Cameras section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.4"
+            android:orientation="vertical"
+            android:layout_marginEnd="@dimen/section_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cameras"
+                android:textColor="@color/accent"
+                android:textSize="@dimen/subtitle_text_size"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/item_margin" />
+
+            <TextView
+                android:id="@+id/tvNoCameras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="@string/no_cameras"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/body_text_size" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCameras"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:descendantFocusability="afterDescendants" />
+
+        </LinearLayout>
+
+        <!-- Events section -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recent_events"
+                android:textColor="@color/accent"
+                android:textSize="@dimen/subtitle_text_size"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/item_margin" />
+
+            <ProgressBar
+                android:id="@+id/progressEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvNoEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="@string/no_events"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/body_text_size" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEvents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:descendantFocusability="afterDescendants" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
