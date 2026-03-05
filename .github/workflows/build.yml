@@ -1,6 +1,5 @@
-# Note: This workflow requires a GOOGLE_SERVICES_JSON secret containing
-# the base64-encoded contents of your google-services.json file.
-# Generate it with: base64 -w 0 app/google-services.json
+# Note: google-services.json is expected to be in the app/ directory,
+# committed directly in the repository.
 
 name: Build Debug APK
 
@@ -35,9 +34,6 @@ jobs:
 
       - name: Generate Gradle wrapper
         run: gradle wrapper --gradle-version 8.7
-
-      - name: Decode google-services.json
-        run: echo "${{ secrets.GOOGLE_SERVICES_JSON }}" | base64 --decode > app/google-services.json
 
       - name: Build debug APK
         run: ./gradlew assembleDebug
